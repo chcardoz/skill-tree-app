@@ -1,2 +1,2 @@
-# skill-tree-app
-A web app that resembles a skill tree in a game for IRL skills.
+### SKILL TREE APP
+This is the app right here
