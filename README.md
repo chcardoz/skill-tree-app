@@ -1,6 +1,8 @@
 ## SKILL TREE APP
 
 ### Version 1
-* [ ] Setup Client
-    * [ ] Install Dependencies
-* [ ] Setup Graph
+* [ ] Client
+    * [x] Install D3.js
+    * [ ] Graph Framework
+    * [ ] Data
+* [ ] Server
