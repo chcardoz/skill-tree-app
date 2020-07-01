@@ -4,11 +4,13 @@
 * [ ] Client
     * [x] Install D3.js
     * [ ] Graph Framework
-    * [ ] Data
+    * [ ] Data Framework
+        * [ ] General idea of Data
+        * [ ] Tests with sample data
 * [ ] Server
 
 
-### Data Representation
+### General Form of the Data
 In JSON format, object containing all the skills
 ```{
     "nameOfSkill": {
@@ -16,6 +18,8 @@ In JSON format, object containing all the skills
         "dateStarted": startingDate
     }
 }```
+
+
 Another dataset, preferably JSON containg relationships between skills. Something like...
 ```{
     "parent": ["child1","child2"]
