@@ -11,20 +11,22 @@
 
 
 ### General Form of the Data
-In JSON format, object containing all the skills
+A single JSON containing the skill information and the nodes, borrowed from https://observablehq.com/@d3/force-directed-graph
 ```
 {
-    "nameOfSkill": {
-        "hours": numberOfHours
-        "dateStarted": startingDate
-    }
-}
-```
-
-
-Another dataset, preferably JSON containg relationships between skills. Something like...
-```
-{
-    "parent": ["child1","child2"]
+    nodes:[
+      {
+         id:"nameofSkill"
+         group:"categoryofSkill"
+      },
+      {..},{..}
+    ]
+    links:[
+      {
+        source:"skillOne"
+        target:"skillTwo"
+      },
+      {..},{..}
+    ]
 }
 ```
