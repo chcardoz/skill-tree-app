@@ -4,8 +4,10 @@
 * [ ] Client
     * [x] Install D3.js
     * [ ] Graph Framework
+        * [ ] Set up Canvas for graph
+        * [ ] Test the graph for sample data
     * [ ] Data Framework
-        * [ ] General idea of Data
+        * [x] General idea of Data
         * [ ] Tests with sample data
 * [ ] Server
 
