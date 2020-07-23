@@ -1,6 +1,3 @@
-console.log(d3)
-//data = FileAttachment("data.json").json()
-
 
 data = {
     "nodes": [
@@ -340,10 +337,36 @@ data = {
     ]
   }
 
-console.log(data)
 
 const links = data.links.map(d => Object.create(d))  //create a new object of only links
 const nodes = data.nodes.map(d => Object.create(d))  //create a new object of only nodes
 
-d3.select("svg")
+const width = 100
+const height = 100
+
+const svg = d3.select("svg")
+
+const simulation = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d => d.id))
+    .force("charge", d3.forceManyBody())
+    .force("center", d3.forceCenter(width / 2, height / 2));
+
+svg.style("color","red")
     .attr("viewBox", [0, 0, width, height])
+    .style("background-color","yellow")
+
+const link = svg.append("g")
+    .attr("stroke", "#999")
+    .attr("stroke-opacity", 0.6)
+  .selectAll("line")
+  .data(links)
+  .join("line")
+    .attr("stroke-width", d => Math.sqrt(d.value));
+
+const node = svg.append("g")
+    .attr("stroke", "#fff")
+    .attr("stroke-width", 1.5)
+  .selectAll("circle")
+  .data(nodes)
+  .join("circle")
+    .attr("r", 5)
